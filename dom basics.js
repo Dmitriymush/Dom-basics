@@ -7,7 +7,7 @@ function list(data) {
     let li = document.createElement('li');
     li.textContent = dat;
 
-    if (data[dat]) {
+    if (data[dat] && typeof data[dat] === 'object ) {
        li.append(list(data[dat]));
     }
 
